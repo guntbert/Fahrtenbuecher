@@ -10,6 +10,10 @@ namespace Fahrtenbuecher
     {
         static void Main(string[] args)
         {
+            DriversLogBook billsLogBook = new DriversLogBook();
+            DriversLogBook johnsLogBook = new DriversLogBook();
+
+            billsLogBook.
             Console.ReadKey();
         }
     }

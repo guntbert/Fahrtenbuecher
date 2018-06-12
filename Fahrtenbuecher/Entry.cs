@@ -14,8 +14,8 @@ namespace Fahrtenbuecher
     /// </remarks>
     public class Entry
     {
-        DateTime date;
-        double distance;
+        public DateTime date;
+        public double distance;
     }
 }
 

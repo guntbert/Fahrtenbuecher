@@ -12,7 +12,7 @@ namespace Fahrtenbuecher
     /// <remarks> VORLÄUFIG public</remarks>
     public class DriversLogBook
     {
-        string LicensePlateNumber;
-        List<Entry> Entries;
+        public string LicensePlateNumber;
+        public List<Entry> Entries;
     }
 }
