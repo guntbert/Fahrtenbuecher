@@ -10,26 +10,15 @@ namespace Fahrtenbuecher
     {
         static void Main(string[] args)
         {
-            DriversLogBook billsLogBook = new DriversLogBook();
-            DriversLogBook johnsLogBook = new DriversLogBook();
+            DriversLogBook billsLogBook = new DriversLogBook("WZ 12345A");
+            DriversLogBook johnsLogBook = new DriversLogBook("G 99ZZ");
 
-            billsLogBook.LicensePlateNumber = "WZ 12345A";
-            billsLogBook.Entries = new List<Entry>();
-            Entry newEntry = new Entry();
-            newEntry.date = DateTime.Now.Date;
-            newEntry.distance = 134.5;
-            billsLogBook.Entries.Add(newEntry);
-            WriteLogbook(billsLogBook);
+            Entry newEntry = new Entry(DateTime.Now.Date,134.5);
+      
+            billsLogBook.AddNewEntry(newEntry);
+            billsLogBook.WriteLogbook();
             Console.ReadKey();
         }
 
-        static void WriteLogbook(DriversLogBook logbook)
-        {
-            Console.WriteLine(logbook.LicensePlateNumber);
-            foreach(Entry entry in logbook.Entries)
-            {
-                Console.WriteLine($"{entry.date:d}: {entry.distance} km");
-            }
-        }
     }
 }

@@ -14,8 +14,22 @@ namespace Fahrtenbuecher
     /// </remarks>
     public class Entry
     {
-        public DateTime date;
-        public double distance;
+        private DateTime date;
+        private double distance;
+        public Entry(DateTime date, double distance)
+        {
+            this.date = date;
+            this.distance = distance;
+        }
+
+        public double Distance
+        {
+            get { return distance; }
+        }
+        public DateTime Date
+        {
+            get { return date; }
+        }
     }
 }
 
