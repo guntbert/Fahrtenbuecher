@@ -13,7 +13,7 @@ namespace Fahrtenbuecher
             DriversLogBook billsLogBook = new DriversLogBook();
             DriversLogBook johnsLogBook = new DriversLogBook();
 
-            billsLogBook.
+            billsLogBook.LicensePlateNumber = "WZ 12345A";
             Console.ReadKey();
         }
     }
